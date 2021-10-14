@@ -1,11 +1,9 @@
 package com.mch.qa.pages;
 
-import java.awt.Robot;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -59,14 +57,10 @@ public class FilesFoldersPage extends TestBase {
 
 	
 	//PageFactoryMeethod
-		public FilesFoldersPage() {
-
-			PageFactory.initElements(driver, this);
-
+	public FilesFoldersPage() {
+           PageFactory.initElements(driver, this);
 		}
-		
-		
-		
+			
 	public void Right_click_for_Dmenu() {
 		Actions actions = new Actions(driver);
 		actions.contextClick(Space_Click).perform();

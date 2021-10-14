@@ -1,13 +1,8 @@
 package com.mch.qa.pages;
 
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-
 import com.mch.qa.base.TestBase;
 
 public class LoginPage extends TestBase{

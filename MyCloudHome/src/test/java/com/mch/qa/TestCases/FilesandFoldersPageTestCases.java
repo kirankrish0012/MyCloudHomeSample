@@ -1,12 +1,5 @@
 package com.mch.qa.TestCases;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,7 +18,7 @@ public class FilesandFoldersPageTestCases extends TestBase{
 	}
 	
 	@BeforeMethod
-	public void setup(){
+	public void setup() {
 		initialization();
 		loginPage = new LoginPage();
 	    landingPage = new LandingPage();
@@ -40,12 +33,14 @@ public class FilesandFoldersPageTestCases extends TestBase{
 //		filesPage.Newfolder_Creation_and_Validation_method();
 //	}
 	
-	@Test(priority=2)	
+	@Test(priority=1)	
 	public void New_Folder_Creation_Verification_with_SearchOption() throws InterruptedException {
 		landingPage.ClickOnSignIn();
 		filesPage = loginPage.Login(prop.getProperty("username"), prop.getProperty("password"));
 		filesPage.FolderSearch_Method();
 	}
+	
+	
 	
 //	@AfterMethod
 //	public void TearDown() {

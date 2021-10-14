@@ -23,7 +23,7 @@ public class TestBase {
 		FileInputStream fip;
 		
 		try {
-			fip = new FileInputStream("/Users/kirann/eclipse-workspace/MyCloudHome/src/main/java/com/mch/qa/config/config.properties");
+			fip = new FileInputStream("/Users/kirann/git/MyCloudHomeSample/MyCloudHome/src/main/java/com/mch/qa/config/config.properties");
 			prop.load(fip);
 			
 		} catch (FileNotFoundException e) {
