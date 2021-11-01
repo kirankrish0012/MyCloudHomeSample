@@ -3,12 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mch.qa.TestCases.FilesandFoldersPageTestCases">
+      <class name="com.mch.qa.TestCases.settingsPageTestCases">
         <methods>
           <include name="setup"/>
-          <include name="New_Folder_Creation_Verification_with_SearchOption"/>
+          <include name="TearDown"/>
+          <include name="changeEmailTest"/>
+          <include name="settingsPageIsDisplayed"/>
         </methods>
-      </class> <!-- com.mch.qa.TestCases.FilesandFoldersPageTestCases -->
+      </class> <!-- com.mch.qa.TestCases.settingsPageTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

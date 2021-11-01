@@ -1,5 +1,8 @@
 package com.mch.qa.TestCases;
 
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -27,10 +30,32 @@ public class loginPageTestCases extends TestBase{
 	
 	@Test(priority=1)	
 	public void LoginTest() throws InterruptedException {
+		
+		String welcome = driver.findElement(By.xpath("//*[contains(text(),'Welcome')]")).getText();
+		String Welcome ="Welcome";
+		String PageUrl = driver.getCurrentUrl();
+		String ActualUrl = "https://staging-kamino.dev.wdckeystone.com/sessions/new";
+
+		landingPage.clickOnAcceptCookies();
 		landingPage.ClickOnSignIn();
-		filesPage = loginPage.Login(prop.getProperty("username"), prop.getProperty("password"));
+		Thread.sleep(3000);
+		loginPage.Alernate_Login(prop.getProperty("username"), prop.getProperty("password"));
 		
-		
+		 		
+//		if (welcome.equals(Welcome)) {
+//			
+//			
+//			filesPage = loginPage.Login(prop.getProperty("username"), prop.getProperty("password"));
+//		
+//		}else if(PageUrl.equals(ActualUrl)){
+//			
+//			filesPage = loginPage.Alernate_Login(prop.getProperty("username"), prop.getProperty("password"));
+//			
+//		}else {
+//			
+//			//Assert.assertEquals(true, false, "The login page is not neither Auth0 or Normal");
+//		}
+//			
 
 	}
 	

@@ -49,6 +49,9 @@ public class LandingPage extends TestBase {
 
 	@FindBy(xpath = "//*[contains(text(),'Support')]")
 	WebElement Support;
+	
+	@FindBy(xpath = "//button[@id='truste-consent-button']")
+	WebElement Acceptcookies;
 
 	// PageFactoryMeethod
 	public LandingPage() {
@@ -59,6 +62,11 @@ public class LandingPage extends TestBase {
 
 	// Actionsmethods
 	//loginpage title validation
+	
+	public void clickOnAcceptCookies() {
+		Acceptcookies.click();
+	}
+	
 	public String ValidateLoginPageTitle() {
 		return driver.getTitle();
 

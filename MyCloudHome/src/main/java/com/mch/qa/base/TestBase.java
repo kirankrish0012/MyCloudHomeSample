@@ -8,15 +8,18 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	public static WebDriverWait wait;
+	
 	
 
 	// constructor
-	public TestBase() {
+	public  TestBase() {
 
 		// We need to create an object to read the data from config file
 		prop = new Properties();
@@ -44,6 +47,7 @@ public class TestBase {
 
 			System.setProperty("webdriver.chrome.driver", "/Users/kirann/Downloads/MYCLOUDHIOME/chromedriver");
 			driver = new ChromeDriver();
+			wait = new WebDriverWait(driver,30);
 
 		}
 		driver.manage().window().maximize();
